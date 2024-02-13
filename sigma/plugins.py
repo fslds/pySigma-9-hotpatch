@@ -99,6 +99,7 @@ class SigmaPlugin:
     report_issue_url : str
     state : SigmaPluginState
     pysigma_version : Specifier
+    capabilities: Set[str] = field(default_factory=set)
 
     @classmethod
     def from_dict(cls, d: Dict) -> "SigmaPlugin":
